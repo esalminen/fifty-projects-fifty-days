@@ -1,0 +1,44 @@
+// ********** COURSE SOLUTION **********
+const contents = document.querySelectorAll('.content')
+const listItems = document.querySelectorAll('nav ul li')
+
+listItems.forEach((item, idx) => {
+  item.addEventListener('click', () => {
+    hideAllContents()
+    hideAllItems()
+
+    item.classList.add('active')
+    contents[idx].classList.add('show')
+  })
+})
+
+function hideAllContents() {
+  contents.forEach(content => content.classList.remove('show'))
+}
+
+function hideAllItems() {
+  listItems.forEach(item => item.classList.remove('active'))
+}
+
+// ********** MY SOLUTION **********
+// const images = document.querySelectorAll('.phone img')
+// const navButtons = document.querySelectorAll('.phone li')
+
+// navButtons.forEach((button, idx) => {
+//   button.addEventListener('click', () =>{
+//     show(idx)
+//   })
+// })
+
+// function show(idx) {  
+//   images.forEach(image => {
+//     image.classList.remove('show')
+//   })
+
+//   navButtons.forEach(btn => {
+//     btn.classList.remove('active')
+//   })
+
+//   images[idx].classList.add('show')
+//   navButtons[idx].classList.add('active')
+// }
