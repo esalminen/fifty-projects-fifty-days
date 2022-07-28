@@ -16,7 +16,6 @@ range.addEventListener('input', (e) => {
   const left = ((value * num_range_width) / max) - (num_label_width / 2)
   const leftScaled = scale(left, -40, 260, -28, 248) // scale left position range where half of thumb width is subtracted from both ends
 
-  console.log(leftScaled)
   label.style.left = `${leftScaled}px`
   label.innerHTML = value
 })
